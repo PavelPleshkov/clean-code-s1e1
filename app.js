@@ -8,20 +8,20 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput = document.getElementById("new-task");//Add a new task.
-var addButton = document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder = document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
-var completedTasksHolder = document.getElementById("completed-tasks");//completed-tasks
+var taskInput = document.getElementById('new-task');//Add a new task.
+var addButton = document.getElementsByTagName('button')[0];//first button
+var incompleteTaskHolder = document.getElementById('incomplete-tasks');//ul of #incomplete-tasks
+var completedTasksHolder = document.getElementById('completed-tasks');//completed-tasks
 
 //New task list item
 var createNewTaskElement = function(taskString) {
-    var listItem = document.createElement("li");
-    var checkBox = document.createElement("input");
-    var label = document.createElement("label");
-    var editInput = document.createElement("input");
-    var editButton = document.createElement("button");
-    var deleteButton = document.createElement("button");
-    var deleteButtonImg = document.createElement("img");
+    var listItem = document.createElement('li');
+    var checkBox = document.createElement('input');
+    var label = document.createElement('label');
+    var editInput = document.createElement('input');
+    var editButton = document.createElement('button');
+    var deleteButton = document.createElement('button');
+    var deleteButtonImg = document.createElement('img');
 
     label.innerText = taskString;
     label.className = 'task';
@@ -67,9 +67,9 @@ var editTask = function() {
 
     var listItem = this.parentNode;
     var editInput = listItem.querySelector('input[type=text]');
-    var label = listItem.querySelector("label");
-    var editBtn = listItem.querySelector(".edit");
-    var containsClass = listItem.classList.contains("editMode");
+    var label = listItem.querySelector('label');
+    var editBtn = listItem.querySelector('.edit');
+    var containsClass = listItem.classList.contains('editMode');
     //If class of the parent is .editmode
     if (containsClass) {
         //switch to .editmode
@@ -87,7 +87,7 @@ var editTask = function() {
 
 //Delete task.
 var deleteTask = function() {
-    console.log("Delete Task...");
+    console.log('Delete Task...');
 
     var listItem=this.parentNode;
     var ul=listItem.parentNode;
@@ -107,7 +107,7 @@ var taskCompleted = function() {
 
 
 var taskIncomplete = function() {
-    console.log("Incomplete Task...");
+    console.log('Incomplete Task...');
 //Mark task as incomplete.
     //When the checkbox is unchecked
     //Append the task list item to the #incomplete-tasks.
